@@ -3,73 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tables in Tables</title>
+    <title>Nested Tables Example</title>
     <style>
         table {
             border-collapse: collapse;
-            width: 80%;
-            margin: 20px auto;
+            width: 100%;
         }
-        table, th, td {
+        td, th {
             border: 1px solid black;
+            padding: 8px;
             text-align: center;
-            padding: 10px;
         }
-        .black-cell {
+        .black-background {
             background-color: black;
             color: white;
         }
     </style>
 </head>
 <body>
-    <h1 style="text-align: center;">Tables in Tables</h1>
+
     <table>
-       
         <tr>
-            <th colspan="2">Main Table</th>
-        </tr>
-        <tr>
-          
             <td>
+                <!-- Nested Table 1 -->
                 <table>
                     <tr>
-                        <th>Nested Table 1</th>
+                        <th>Nested Table 2</th>
                         <th>Column 1</th>
                         <th>Column 2</th>
                     </tr>
                     <tr>
-                        <td rowspan="2">Row Span</td>
-                        <td>Data 1</td>
-                        <td>Data 2</td>
+                        <td>Item 1</td>
+                        <td>Value 1</td>
+                        <td>Value 2</td>
                     </tr>
                     <tr>
-                        <td>Data 3</td>
-                        <td>Data 4</td>
+                        <td>Item 2</td>
+                        <td>Value 3</td>
+                        <td>Value 4</td>
                     </tr>
                 </table>
             </td>
-           
             <td>
+                <!-- Nested Table 2 -->
                 <table>
                     <tr>
-                        <th colspan="3">Nested Table 2</th>
-                    </tr>
-                    <tr>
+                        <th>Nested Table 2</th>
                         <th>Column 1</th>
                         <th>Column 2</th>
-                        <th>Column 3</th>
                     </tr>
                     <tr>
-                        <td>Data A</td>
-                        <td>Data B</td>
-                        <td class="black-cell">HTML</td>
+                        <td>Item A</td>
+                        <td>Value A</td>
+                        <td>Value B</td>
+                    </tr>
+                    <tr>
+                        <td>Item B</td>
+                        <td>Value C</td>
+                        <td>Value D</td>
                     </tr>
                 </table>
             </td>
         </tr>
         <tr>
-            <!-- Third Nested Table -->
             <td>
+                <!-- Nested Table 3 with List -->
                 <table>
                     <tr>
                         <th>Nested Table 3</th>
@@ -77,20 +75,7 @@
                         <th>Column 2</th>
                     </tr>
                     <tr>
-                        <td>Data X</td>
-                        <td>Data Y</td>
-                        <td>Data Z</td>
-                    </tr>
-                </table>
-            </td>
-          
-            <td>
-                <table>
-                    <tr>
-                        <th>Nested Table 4</th>
-                    </tr>
-                    <tr>
-                        <td>
+                        <td colspan="3">
                             <ul>
                                 <li>List item 1</li>
                                 <li>List item 2</li>
@@ -100,7 +85,21 @@
                     </tr>
                 </table>
             </td>
+            <td>
+                <!-- Nested Table 4 with HTML background -->
+                <table>
+                    <tr>
+                        <th>Nested Table 4</th>
+                        <th>Column 1</th>
+                        <th>Column 2</th>
+                    </tr>
+                    <tr>
+                        <td class="black-background" colspan="3">HTML</td>
+                    </tr>
+                </table>
+            </td>
         </tr>
     </table>
+
 </body>
 </html>
